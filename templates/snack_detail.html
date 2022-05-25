@@ -2,10 +2,12 @@
 
 {% block content %}
 
-    {% for snack in object_list %}
+
     <h1>{{snack.name}}</h1>
     <p>{{snack.purchaser}}</p>
     <p>{{snack.description}}</p>
-    {% endfor %}
+ <a href="{% url 'snack_update' snack.pk %}"> > Update Snack</a>
+ <a href="{% url 'snack_delete' snack.pk %}"> - Delete Snack</a>
+
     
 {% endblock %}
